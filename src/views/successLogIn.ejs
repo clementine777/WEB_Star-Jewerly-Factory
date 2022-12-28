@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/heads', {headtittle: 'SUCCES LOGIN' , cssForm1:'styles/login/success-login.css' ,
+  cssForm2:'styles/styiles2.css' }); %>
+
+  <body class="grid-container">
+    <%- include ('partials/header.ejs') %>
+      <div class="banner"></div>
+
+      <main class="main-container">
+        <h1>Welcome to Star Jewerly Factory</h1>
+        <ul>
+          <li>
+            Name: <%= userData.firstname %>
+              <br />
+              Apellido: <%= userData.lastname %>
+                <br />
+                Email: <%= userData.email %>
+          </li>
+        </ul>
+      </main>
+
+      <%- include ('partials/footer.ejs') %>
+        <%- include ('partials/scripts.ejs') %>
+  </body>
+
+</html>

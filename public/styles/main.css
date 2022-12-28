@@ -1,0 +1,137 @@
+.main-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 1280px;
+  width: auto;
+}
+
+.products {
+  /* margin: 50px auto 0; */
+  margin: 30px 20px 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 370px 370px 370px;
+  gap: 5%;
+  /* justify-content: space-evenly; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* min-height: 100vh; */
+  align-items: stretch;
+  /* justify-items: ; */
+}
+/*ARTICULOS EN VENTA*/
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  background-color: #150050;
+  /* padding: 0 7px; */
+  /* max-height: 500px; */
+  /* min-height: auto; */
+  max-width: 300px;
+  min-width: auto;
+  border-radius: 4%;
+  text-align: center;
+}
+
+article:hover {
+  transform: translateY(-11px);
+  transition: 0.4s;
+  box-shadow: 0 10px 80px #610094;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+}
+
+/* NUMEROS DEL PRECIO */
+.price {
+  position: relative;
+}
+
+.price .dollar {
+  position: absolute;
+  left: -13px;
+  bottom: 17px;
+}
+
+.price .number {
+  font-size: 35px;
+}
+
+.fractions {
+  position: absolute;
+  left: 40px;
+  bottom: 17px;
+}
+
+button {
+  font-size: 20px;
+  color: white;
+  height: auto;
+  width: 150px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 1rem;
+  border: none;
+  background-color: #610094;
+  cursor: pointer;
+}
+button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
+}
+/*MODO MOVILE*/
+@media screen and (max-width: 800px) {
+  .products {
+    margin: 40px 10px 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+  }
+
+  article {
+    max-height: 470px;
+    min-height: auto;
+    max-width: 350px;
+    min-width: auto;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .price .number {
+    font-size: 45px;
+  }
+
+  .fractions {
+    left: 50px;
+    bottom: 25px;
+  }
+
+  .price .dollar {
+    left: -15px;
+    bottom: 25px;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    height: 2100px;
+    width: auto;
+  }
+}

@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* .grid-container > * {
+  border: 2px solid white;
+} */
+html {
+  height: 100%;
+
+}
+body{
+    min-height:100vh ;
+}
+
+
+.header {
+  grid-area: header;
+}
+.navbar {
+  grid-area: navbar;
+}
+.banner {
+  grid-area: banner;
+}
+.main-container {
+  grid-area: products;
+  min-height:1fr ;
+  
+}
+.footer {
+  grid-area: footer;
+  align-self: end;
+
+
+  /* position: sticky; */
+  /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
+}
+
+.grid-container {
+  background-color: black;
+  display: grid;
+  min-height:100vh ;
+  /* position: relative; */
+  /* justify-items: ;
+  justify-content: flex-start; */
+  /* align-content: end; */
+  /* gap: 10px; */
+  grid-template:
+    "header " 170px
+    "navbar " 40px
+    "banner  " auto
+    "products" 1fr
+    "footer " auto;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    background-color: black;
+    display: grid;
+    
+    grid-template:
+      "header" 170px
+      "navbar " 0
+      "banner  " auto
+      "products" 1fr
+      "footer " auto;
+  } 
+}
+/* }
+@media all and (max-width: 600px) {
+  #test1 { display:none; }
+}

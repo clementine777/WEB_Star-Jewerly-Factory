@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/heads', {headtittle:'PRODUCTS', cssForm1:'/styles/main.css', cssForm2:'/styles/banner2.css' }); -%>
+
+<body class="grid-container">
+  <%- include ('partials/header.ejs') %>
+  <%- include ( 'partials/banner.ejs' ) %>
+  <main class="main-container">
+    <div class="products">
+      <article>
+
+        <a href="#"><img src=<%=product.pics%> alt="ring" />
+        </a>
+        </h2>
+        <div class="price">
+          <span class="dollar">$</span>
+          <span class="number">
+            <%=product.price %>
+          </span>
+          <span class="fractions">
+
+          </span>
+        </div>
+        <button>Add To Cart</button>
+      </article>
+
+  </main>
+  </div>
+  <%- include ('partials/footer.ejs') %>
+  <%- include ('partials/scripts.ejs') %>
+</body>
+
+</html>

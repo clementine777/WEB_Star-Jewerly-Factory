@@ -1,0 +1,42 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  /* justify-content: center; */
+}
+
+.banner img {
+  height: auto;
+  max-width: 70%;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.line-sale {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #610094;
+  justify-content: center;
+  cursor: default;
+}
+
+.line-sale p {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .banner img {
+    height: auto;
+    max-width: 98%;
+    margin: 15px 5px 10px;
+    border-radius: 15px;
+  }
+}

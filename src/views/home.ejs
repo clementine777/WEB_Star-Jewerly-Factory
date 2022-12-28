@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/heads', {headtittle:'Home', cssForm1:'/styles/main.css', cssForm2:'/styles/banner2.css' }); -%>
+
+<body class="grid-container">
+  <%- include ('partials/header.ejs') %>
+  <%- include ( 'partials/banner.ejs' ) %>
+  <!--PRODUCTS-->
+  <main class="main-container">
+    <div class="products">
+      <!-- <article>
+              <a href="#"><img src="assets/img/items2/anillo alas.webp" alt="ring" /></a>
+              WINGS RING</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">29 </span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/aros.webp" alt="ring" /></a>
+              <h2>SILVER BALI EARRINGS</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">14</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/brasalet.webp" alt="ring" /></a>
+              <h2>CHAIN OF SKULLS BRACELET</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">49</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/calavera asesina.webp" alt="ring" /></a>
+              <h2>KILLER SKULL RING</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">39</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/collar.webp" alt="ring" /></a>
+              <h2>STEAMPUNK HEART NECKLACE</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">19</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/img_20220408_145439_1-524a92bf0c9302a34f16555449094446-640-0.webp"
+                  alt="ring" /></a>
+              <h2>SKULL WITHOUT JAW RING</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">49</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/collar.webp" alt="ring" /></a>
+              <h2>STEAMPUNK HEART NECKLACE</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">19</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article>
+
+            <article>
+              <a href="#"><img src="assets/img/items2/img_20220408_145439_1-524a92bf0c9302a34f16555449094446-640-0.webp"
+                  alt="ring" /></a>
+              <h2>SKULL WITHOUT JAW RING</h2>
+              <div class="price">
+                <span class="dollar">$</span>
+                <span class="number">49</span>
+                <span class="fractions">99</span>
+              </div>
+              <button>Add To Cart</button>
+            </article> -->
+
+      <% products.forEach(product => { %>
+      <article>
+        <a href="/detailProduct/<%- product.id %>"> <img src=<%- product.pic %> alt="ring" /></a>
+        <h2><%- product.product_name %></h2>
+        <div class="price">
+          <span class="dollar">$</span>
+          <span class="number"><%- product.price %></span>
+          <span class="fractions">99</span>
+        </div>
+        <button productId="<%- product.id %>" class="cartBotton">Add To Cart</button>
+      </article>
+      <% }) %>
+
+    </div>
+  </main>
+  <%- include ('partials/footer.ejs') %>
+  <%- include ('partials/scripts.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+.presentation {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 15px;
+  width: 100%;
+  height: 10%;
+}
+
+.logo {
+  width: 100%;
+  padding: 0 70px 0 10px;
+  height: auto;
+  cursor: pointer;
+  align-self: center;
+  border-radius: 1rem;
+}
+
+/* ANIMACIONDE LOGO PRINCIPAL DEL HEADER */
+.header .contenedor-header img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  /*transition: box-shadow 0.2s;*/
+}
+
+.contenedor-header {
+  display: flex;
+  background-color: #150050;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  height: 85%;
+}
+
+/* BOTONES DE LOGIN */
+.session {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  gap: 1rem;
+  position: relative;
+}
+
+.session a {
+  color: white;
+  padding: 10px 20px 10px 0px;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.contenedor-header .session .icons i {
+  border-radius: 30%;
+}
+
+.contenedor-header .session .icons i:hover {
+  color: rgb(155, 155, 155);
+  transition: 0.3s;
+}
+
+/* SUB MENU DE INICIO DE SESION */
+.submenu {
+  padding: 5px;
+  margin: 2px;
+  height: 9rem;
+  width: 9rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  top: 4rem;
+  right: 1rem;
+}
+
+.submenu {
+  background: #150050;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  /* display: none; */
+}
+
+.submenu div {
+  justify-content: space-between;
+}
+/* .view-submenu {
+  visibility: visible;
+  opacity: 1;
+} */
+
+/* .submenu div:hover {
+  opacity: 1;
+  visibility: visible;
+} */
+
+/* CALSE DEL SCRIPT PARA QUE MUESTRE EL MENU */
+
+.contenedor-header .session .submenu div:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.submenu .logout-buton {
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+.submenu .logout-buton button {
+  margin: 0;
+  border: none;
+  width: 100px;
+  padding: 5px;
+  font-size: 0.7em;
+  color: white;
+  background-color: #610094;
+  border-radius: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.submenu .logout-buton button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
+}
+
+/* BARRA DE BUSQUEDA */
+.search {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  border: none;
+}
+
+.search input {
+  height: 30px;
+  width: 70%;
+  padding: 0 0 0 9px;
+  font-size: 15px;
+  border-radius: 25px;
+  border: none;
+  outline: no;
+  border: none;
+}
+
+.search button {
+  color: white;
+  position: absolute;
+  right: 0;
+  top: -5px;
+  /* top: 0; */
+  cursor: pointer;
+  border-radius: 50%;
+  /* padding: auto; */
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background-color: #610094;
+}
+.search button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
+}
+
+.search .seacrh-container {
+  color: black;
+}
+
+/*MOVILE*/
+@media screen and (max-width: 800px) {
+  .contenedor-header {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .img-container {
+    content: url(../assets/img/logo-responsive.webp);
+    height: 140px;
+    padding: 0 32px 0 0;
+  }
+
+  .logo {
+    visibility: hidden;
+  }
+
+  .seacrh-container > * {
+    display: none;
+  }
+
+  .session {
+    display: none;
+  }
+
+  .contenedor-header .cart-responsive {
+    padding: 30px;
+    font-size: 45px;
+  }
+
+  .contenedor-header .cart-responsive a {
+    color: white;
+  }
+
+  .contenedor-header .burguer-menu {
+    padding: 30px;
+    font-size: 45px;
+  }
+
+  .contenedor-header .burguer-menu a {
+    color: white;
+  }
+}
+
+/* DESKTOP MODE */
+@media screen and (min-width: 800px) {
+  .contenedor-header .cart-responsive {
+    display: none;
+  }
+
+  .contenedor-header .burguer-menu {
+    display: none;
+  }
+}

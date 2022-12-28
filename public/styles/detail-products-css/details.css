@@ -1,0 +1,218 @@
+.products-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*INIICO DE PEQUEÑO LAYOUT*/
+.products-container-details {
+  display: grid;
+  /* margin: 3% 20%; */
+  margin: 25px 25px;
+  gap: 60px;
+  grid-template:
+    "article descriptions"
+    "relationated relationated" 500px/
+    500px 320px;
+}
+
+/*PARTES DEL LAYOUT*/
+.pic {
+  grid-area: article;
+  height: 800px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 25px;
+  cursor: default;
+}
+
+/*  IMAGEN DE PRODUCTO */
+.pic img {
+  width: auto;
+  height: auto;
+  border-radius: 4%;
+}
+
+.pic .icons-container {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+}
+
+/*SIDEBAR DESCRIPTION*/
+.description h1 {
+  font-size: 29px;
+  padding-top: 20px;
+}
+
+.description hr {
+  width: 100%;
+}
+
+.description {
+  grid-area: descriptions;
+  display: flex;
+  height: 800;
+  /* min-height: 800px; */
+  /* max-height: 500px; */
+  width: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 33px;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+
+/*BOTONES DE LA DESCRIPCION*/
+.description button {
+  color: white;
+  height: 60px;
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #610094;
+  cursor: pointer;
+  font-size: 20px;
+}
+.description button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
+}
+
+.description .sizing a {
+  color: white;
+}
+
+.description .sizing a:hover {
+  color: rgb(155, 155, 155);
+  transition: 0.3s;
+}
+
+/*PRECIO DE LA DESCRIPCION*/
+.price-detail {
+  position: relative;
+  cursor: default;
+}
+
+.price-detail .dollar {
+  position: absolute;
+  left: -20px;
+  bottom: 18px;
+  font-size: 25px;
+}
+
+.price-detail .number {
+  font-size: 45px;
+}
+
+.price-detail .fractions {
+  position: absolute;
+  left: 51px;
+  bottom: 18px;
+  font-size: 25px;
+}
+
+/*productos relacionados en proceso*/
+.relations {
+  grid-area: relationated;
+}
+.relations {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #610094;
+  padding: 20px;
+  width: 100%;
+  height: 10%;
+}
+
+/*MOVILE*/
+@media screen and (max-width: 450px) {
+  .products-container-details {
+    grid-template:
+      "article " 900px
+      "descriptions" auto
+      "relationated " 400px /
+      auto;
+  }
+
+  pic {
+    max-height: 900px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+
+  .pic img {
+    width: auto;
+    height: 720px;
+    padding-top: 20px;
+    border-radius: 4%;
+  }
+
+  .pic > .icons-container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    margin: 20px;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+
+  /*SIDEBAR DESCRIPTION*/
+  .description h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .description hr {
+    width: 100%;
+  }
+
+  .description {
+    grid-area: descriptions;
+    height: 700px;
+    width: auto;
+    text-align: center;
+    padding: 12px;
+    font-size: 19px;
+    line-height: 36px;
+  }
+
+  /*precio movile*/
+
+  .price-detail .dollar {
+    left: -25px;
+    bottom: 31px;
+    font-size: 40px;
+  }
+
+  .price-detail .number {
+    font-size: 75px;
+  }
+
+  .price-detail .fractions {
+    left: 88px;
+    bottom: 32px;
+    font-size: 40px;
+  }
+}

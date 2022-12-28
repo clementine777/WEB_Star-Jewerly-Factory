@@ -1,0 +1,83 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: auto;
+}
+.main-container .login-form {
+  background-color: #150050;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  border-radius: 1rem;
+  width: 35rem;
+  height: 50rem;
+  /* padding-top: 200px;
+  padding-bottom: 200px; */
+}
+
+.main-container .login-form label:not(.text-terms-use) {
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container .login-form input {
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.main-container .login-form button {
+  width: 200px;
+  padding: 0.6rem;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #610094;
+  border-radius: 0.5rem;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+}
+
+.main-container .login-form button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
+}
+
+.main-container .login-form .text-terms-use {
+  align-self: center;
+}
+.main-container .login-form .text-terms-use a,
+#termsofuse {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+#error-message,
+#error-message2,
+#error-message-email {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 12px;
+}
+
+/* agranda el checkbox*/
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 450px) {
+  .main-container .login-form {
+    height: 70rem;
+    width: 90%;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.9);
+  }
+}

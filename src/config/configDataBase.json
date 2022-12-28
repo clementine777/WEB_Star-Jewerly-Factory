@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "star_factory_jewerly",
+    "host": "localhost",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "logging": true
+  }
+}

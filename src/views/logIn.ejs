@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/heads', {headtittle:'Home', cssForm1:'', cssForm2:'/styles/login/signIn.css' }); -%>
+
+<body class="grid-container">
+  <%- include ('partials/header.ejs') %>
+  <div class="banner"></div>
+  <!--LOGIN-FORMS-->
+  <main class="main-container">
+
+    <div class="login">
+
+      <% if (typeof error !== 'undefined' && error) { %>
+      <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <p>
+        Hi there!, do you want to receive news?&nbsp; Please enter your email
+        to log in or sign up
+      </p>
+      <form class="input-spaces" action="/logIn" method="POST">
+        <div id="mail">
+          <input type="email" placeholder="Email" name="email" id="email" required />
+        </div>
+        <br>
+        <div id="pass">
+          <input type="password" placeholder="Password" name="password" id="password" required />
+        </div>
+        <br>
+        <button type="submit" class="send-buttom"> Continue </button>
+      </form>
+      <br>
+      <div class="login-resources">
+        <a href="#">
+          <span class="face"><i class="fa-brands fa-square-facebook"></i>&nbsp; Continue
+            withFacebook?</span>
+        </a>
+        <a href="#" class="fargot-pass">Fargot your Password? </a>
+      </div>
+    </div>
+  </main>
+
+  <%- include ('partials/footer.ejs') %>
+  <%- include ('partials/scripts.ejs') %>
+</body>
+
+</html>
