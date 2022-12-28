@@ -40,7 +40,7 @@ app.use("/cart", require("./routes/productsAPIRoute"));
 //ruta de dashboard angular
 app.use("/api", require("./routes/mainRoutes"));
 //ruta de logout de las cookies
-app.use(require("./routes/cookieRoute"));
+app.use(require("./routes/logOutRoute"));
 
 app.use(function (err, req, res, next) {
   // Manejar el error aquí
