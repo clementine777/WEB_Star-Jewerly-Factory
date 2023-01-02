@@ -36,6 +36,7 @@ products.init(
     },
     pics: {
       type: DataTypes.STRING,
+      field: "pics",
     },
   },
   {

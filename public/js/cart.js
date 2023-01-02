@@ -7,6 +7,7 @@ if (!shoppingCart) {
 
 // Capturamos el contenedor de productos de la vista del carrito
 let productsContainer = document.querySelector(".cart-main");
+let productCart = document.querySelector(".product-cart");
 
 // CODIGO PARA MOSTRAR PRODUCTOS EN EL CARRITO
 // Hacemos un condicional para agregar el addEventListener si es que el elemento existe
@@ -14,6 +15,10 @@ if (productsContainer) {
   if (productsContainer) {
     productsContainer.addEventListener("load", showProducts());
   }
+}
+//EVITA LA ELO RELOAD DE LOS PRODUCTOS MEDIANTE EL BORRADO DE HTML
+function cleanHtml() {
+  (productCart.innerHTML = ""), showProducts();
 }
 // Funcion para mostrar productos en el carrito
 async function showProducts() {
@@ -141,7 +146,8 @@ function removeFromCart(productId) {
     // Actualizamos el carrito en localStorage
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     // recargamos el carrito para que vuelva a cargar los productos del localStorage y se pueda ver el cambio
-    location.reload();
+    // location.reload();
+    cleanHtml();
   }
 }
 
@@ -154,7 +160,8 @@ function addUnitIn(productId) {
   // Actualizamos el carrito en localStorage
   localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
   // recargamos el carrito para que vuelva a cargar los productos del localStorage y se pueda ver el cambio
-  location.reload();
+  // location.reload();
+  cleanHtml();
 }
 
 // Función para quitar una unidad a un producto en el carrito
@@ -171,5 +178,6 @@ function removeUnitIn(productId) {
   // Actualizamos el carrito en localStorage
   localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
   // recargamos el carrito para que vuelva a cargar los productos del localStorage y se pueda ver el cambio
-  location.reload();
+  // location.reload();
+  cleanHtml();
 }
