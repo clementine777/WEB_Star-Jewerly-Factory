@@ -41,6 +41,8 @@ app.use("/cart", require("./routes/productsAPIRoute"));
 app.use("/api", require("./routes/mainRoutes"));
 //ruta de logout de las cookies
 app.use(require("./routes/logOutRoute"));
+//rota error
+app.use("/error", require("./routes/404"));
 
 app.use(function (err, req, res, next) {
   // Manejar el error aquí

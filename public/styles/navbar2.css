@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-nav ul li {
+nav ul .reference-nav {
   padding: 25px;
   cursor: pointer;
   font-size: 17px;
@@ -24,11 +24,11 @@ nav ul li {
   font-weight: bold;
 }
 /*ANIMACIONES DE NAV BAR*/
-nav ul li:hover {
+nav ul .reference-nav:hover {
   transform: scale(1.2);
   transition: 0.3s;
 }
-nav ul li link:hover {
+nav ul .reference-nav link:hover {
   text-shadow: 20px 20px 20px #c40a67;
   transition: text-shadow 0.3s ease;
 }

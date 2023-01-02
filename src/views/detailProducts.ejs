@@ -9,6 +9,8 @@
     <div class="products-container-details">
       <div class="pic">
         <img src="<%- product.pics  %> " alt="ring">
+        <span class="weight-product"> Weight: <%- product.weight %> </span>
+        <span class="material-product">Material: <%- product.material  %> </span>
         <div id="icons-container-mobile">
           <div class="icons-container">
             <span> <i class="fa-solid fa-truck-fast"></i>&nbsp; &nbsp; Free Shipping Wolrdwide </span>
@@ -28,8 +30,12 @@
           <span class="number"><%- product.price %></span>
           <!-- <span class="fractions">99</span> -->
         </div>
-        <button class="buyBotton">BUY</button>
-        <button class="cartBotton" productId="<%- product.id %>">ADD TO CART</button>
+        <a href="/error/404"> <button class="buyBotton">BUY</button> </a>
+
+        <!-- <button class="cartBotton" productId="">ADD TO CART</button> -->
+
+        <a href="/cart"> <button productId="<%- product.id %>" class="cartBotton">Add To Cart </button> </a>
+        <!-- <button productId="" class="cartBotton">Add To Cart </button> -->
         <span class="sizing"><i> Ring Size:<a href="#">Sizing Help?</a> </i> </span>
 
       </div>

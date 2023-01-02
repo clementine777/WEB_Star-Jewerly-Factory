@@ -1,0 +1,10 @@
+.main-container-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container-404 img {
+  margin: 2rem;
+  align-content: center;
+  align-items: center;
+}

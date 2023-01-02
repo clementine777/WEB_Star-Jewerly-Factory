@@ -44,6 +44,11 @@
   justify-content: space-around;
 }
 
+.pic .weight-product,
+.material-product {
+  font-size: 0.8em;
+}
+
 /*SIDEBAR DESCRIPTION*/
 .description h1 {
   font-size: 29px;
