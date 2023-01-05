@@ -18,7 +18,7 @@ if (productsContainer) {
 }
 //EVITA LA ELO RELOAD DE LOS PRODUCTOS MEDIANTE EL BORRADO DE HTML
 function cleanHtml() {
-  (productCart.innerHTML = ""), showProducts();
+  (productsContainer.innerHTML = ""), showProducts();
 }
 // Funcion para mostrar productos en el carrito
 async function showProducts() {
@@ -47,11 +47,11 @@ async function showProducts() {
   // Apartir de aca lo que hago es renderizar los elementos de la vista del carrito con sus
   // respectivos datos, iterando atravez de "arrayProducts" y creando un product card por elemento
   for (let product of arrayProducts) {
-    subtotal += product.price;
-    total += product.price;
+    subtotal += product.price * product.quantity;
+    total += product.price * product.quantity;
     let productHTML = `<div class="product-cart">
     <article>
-      <img src="assets/img/items2/aros.webp" alt="product_image">
+      <img src="${product.pics}" alt="product_image">
       <h1 class="cart-name">${product.product_name}</h1>
       <div class="item-number-grid">
         <div class="item-number">
@@ -76,7 +76,7 @@ async function showProducts() {
   <div class="finally-purchase-container">
   <div class="subtotal">
     <h1> Subtotal: </h1>
-    <h2> $${subtotal.toFixed(2)} </h2>
+    <h2> $${total.toFixed(2)} </h2>
   </div>
 
   <div class="shipping">
@@ -86,7 +86,7 @@ async function showProducts() {
 
   <div class="total">
     <h1> Estimated Total: </h1>
-    <h2> $${total.toFixed(2)} </h2>
+    <h2> $${Math.ceil(subtotal)} </h2>
   </div>
   </div>
   <button class="finally-shop-button"> CONTINUE </button>`;

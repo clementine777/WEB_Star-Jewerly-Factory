@@ -9,6 +9,7 @@ const logInView = (req, res) => {
 
 const compareUser = async (req, res) => {
   const { email, password } = req.body;
+
   const user = await Users.findOne({ where: { email } });
   console.log(user);
   if (!user) {
@@ -20,6 +21,8 @@ const compareUser = async (req, res) => {
   //console.error("contraseña invalida");
   if (passwordIsValid) {
     req.session.user = session;
+    // req.body.firstname = username;
+    // req.session.username = user.firstname;
 
     res.cookie("cookieUser", req.session.user, {
       expires: new Date(Date.now() + 604800),

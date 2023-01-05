@@ -35,8 +35,17 @@
 @media screen and (max-width: 800px) {
   .banner img {
     height: auto;
-    max-width: 98%;
-    margin: 15px 5px 10px;
+    max-width: 95%;
+    margin: 50px 15px 30px;
     border-radius: 15px;
+  }
+  .line-sale {
+    font-size: 2em;
+    padding: 30px;
+    width: 100%;
+    /* height: 60px; */
+  }
+  .line-sale p {
+    font-size: 0.8em;
   }
 }
