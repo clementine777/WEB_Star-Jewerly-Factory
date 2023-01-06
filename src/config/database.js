@@ -1,20 +1,31 @@
 const Sequelize = require("sequelize");
-const config = require("./configDataBase.json");
-const db = {};
+const config = require("./configDataBase.js");
 
 const sequelize = new Sequelize(
-  config.development.database,
-  config.development.username,
-  config.development.password,
+  config.database,
+  config.username,
+  config.password,
   {
-    host: config.development.host,
-    dialect: config.development.dialect,
+    //operatorsAliases: false,
+    host: config.host,
+    dialect: config.dialect,
+    //operatorsAliases: false,
     logging: false, //habilitar para ver en consola las consultas sql
+    pool: {
+      max: config.pool.max,
+      min: config.pool.min,
+      acquire: config.pool.acquire,
+      idle: config.pool.idle,
+    },
   }
 );
+const db = {};
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+// db.products = require("../models/products.js")(sequelize, Sequelize);
+// db.users = require("../models/users.js")(sequelize, Sequelize);
 
 db.sequelize
   .sync({ force: false })

@@ -50,6 +50,10 @@ products.init(
 );
 module.exports = products;
 
+// module.exports = (sequelize, Sequelize) => {
+//   return products;
+// };
+
 // Products.findAll({
 //   attributes: [
 //     "id_product",

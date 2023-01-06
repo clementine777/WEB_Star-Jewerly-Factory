@@ -1,5 +1,7 @@
 //const { where } = require("sequelize");
-const { sequelize, products } = require("../models/products");
+//const { sequelize, products } = require("../models/products"); EL ERROR MAS LOCO SOLO LA DESESTRUCTURACION CUSABA EL ERROR NO SE POR QUE
+
+const products = require("../models/products.js");
 
 //consulata toda la tabala
 const loadAllPorducts = (req, res) => {

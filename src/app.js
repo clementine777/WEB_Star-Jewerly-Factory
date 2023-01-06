@@ -19,7 +19,7 @@ app.use(morgan("dev"));
 //maneja las cookies
 app.use(cookie());
 //importa archvio de configuracion de express-session
-app.use(session(sessionConfig));
+app.use(session(sessionConfig)); //da error
 //usar json e interactuar
 app.use(express.json());
 // notor de plantillas ejs
