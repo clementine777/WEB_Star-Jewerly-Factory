@@ -2,13 +2,15 @@
   color: white;
   display: flex;
   justify-content: center;
-  height: 1280px;
+  height: 1380px;
+  /* height: auto; */
   width: auto;
 }
 
 .products {
   /* margin: 50px auto 0; */
-  margin: 30px 20px 0;
+  /* height: auto; */
+  margin: 50px 20px 50px;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 370px 370px 370px;
@@ -56,22 +58,30 @@ article img {
 /* NUMEROS DEL PRECIO */
 .price {
   position: relative;
+  display: flex;
+  /* width: 5rem; */
+  width: auto;
 }
 
 .price .dollar {
-  position: absolute;
+  padding-top: 5px;
+  /* position: absolute;
   left: -13px;
-  bottom: 17px;
+  bottom: 17px; */
 }
 
 .price .number {
   font-size: 35px;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
-.fractions {
-  position: absolute;
-  left: 40px;
-  bottom: 17px;
+.price .fractions {
+  padding-top: 5px;
+  /* position: absolute; */
+  /* left: 40px; */
+  /* bottom: 17px; */
 }
 
 button {

@@ -36,11 +36,12 @@ app.use(require("./routes/detailProductRoute"));
 app.use(require("./routes/cartRoute"));
 app.use(require("./routes/logInRoute"));
 app.use(require("./routes/signInRoute"));
+//ruta de logout de las cookies
+app.use(require("./routes/logOutRoute"));
+
 app.use("/cart", require("./routes/productsAPIRoute"));
 //ruta de dashboard angular
 app.use("/api", require("./routes/mainRoutes"));
-//ruta de logout de las cookies
-app.use(require("./routes/logOutRoute"));
 //rota error
 app.use("/error", require("./routes/404"));
 
