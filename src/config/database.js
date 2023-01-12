@@ -9,7 +9,6 @@ const sequelize = new Sequelize(
     //operatorsAliases: false,
     host: config.host,
     dialect: config.dialect,
-    //operatorsAliases: false,
     logging: false, //habilitar para ver en consola las consultas sql
     pool: {
       max: config.pool.max,
@@ -30,10 +29,10 @@ db.Sequelize = Sequelize;
 db.sequelize
   .sync({ force: false })
   .then(() => {
-    console.log("---CONECTION TO DATABASE---");
+    console.log("------CONECTION TO DATABASE------");
   })
   .catch((err) => {
-    console.error("---ERROR CONECTION DATABASE---", err);
+    console.error("!!!***ERROR CONECTION DATABASE***!!!", err);
   });
 
 module.exports = db.sequelize;

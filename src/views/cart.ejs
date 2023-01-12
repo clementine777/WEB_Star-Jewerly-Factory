@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('partials/heads.ejs', {headtittle: 'CART' , cssForm1:'', cssForm2:'styles/detail-products-css/cart.css' }); %>
+<%- include ('partials/heads.ejs', {headtittle: 'CART' , cssForm1:'styles/loader/loaer-spinner.css', cssForm2:'styles/detail-products-css/cart.css' }); %>
 
 <body class="grid-container">
   <%- include ('partials/header.ejs') %>
   <div class="banner"></div>
   <main class="main-container cart-main">
+    <!-- <div class="spinner" style="display: none;">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div> -->
   </main>
   <%- include ('partials/footer.ejs') %>
   <%- include ('partials/scripts.ejs') %>

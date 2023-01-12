@@ -1,6 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/database.js");
-//Modelo extendido .define no funciona
+
+//--------Modelo extendido .define no funciona-----------
+
 class products extends Model {}
 products.init(
   {

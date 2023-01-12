@@ -9,18 +9,29 @@ if (!shoppingCart) {
 let productsContainer = document.querySelector(".cart-main");
 let productCart = document.querySelector(".product-cart");
 
-// CODIGO PARA MOSTRAR PRODUCTOS EN EL CARRITO
+// CODIGO PARA MOSTRAR PRODUCTOS EN EL CARRITO----------------------------------
 // Hacemos un condicional para agregar el addEventListener si es que el elemento existe
 if (productsContainer) {
   if (productsContainer) {
     productsContainer.addEventListener("load", showProducts());
   }
 }
+
+//FUNCIONES PARA MOSTRAR Y BLOQUEAR SPINNER DE CARGA----------------------------
+// function cleanHtml() {
+//   productsContainer.innerHTML = "";
+//   document.querySelector(".spinner").style.display = "block";
+//   showProducts();
+// }
+
 //EVITA LA ELO RELOAD DE LOS PRODUCTOS MEDIANTE EL BORRADO DE HTML
 function cleanHtml() {
   (productsContainer.innerHTML = ""), showProducts();
 }
-// Funcion para mostrar productos en el carrito
+
+//NUEVA FUNCION cleanHtml() con spinner de carga---------------------------
+
+// Funcion para mostrar productos en el carrito------------------------------
 async function showProducts() {
   // Llamo el array "shoppingCart" del localStorage y declaro un array vacio llamado "arrayProducts"
   let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));

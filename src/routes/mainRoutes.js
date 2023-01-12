@@ -20,4 +20,5 @@ router.delete("/:id", deleteProduct);
 
 router.put("/:id", updateProduct);
 
+router.post("/login");
 module.exports = router;

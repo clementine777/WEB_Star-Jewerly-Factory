@@ -57,7 +57,7 @@ article img {
 
 /* NUMEROS DEL PRECIO */
 .price {
-  position: relative;
+  /* position: relative; */
   display: flex;
   /* width: 5rem; */
   width: auto;
