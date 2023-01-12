@@ -5,6 +5,7 @@ const {
   addProduct,
   deleteProduct,
   updateProduct,
+  loginUser,
 } = require("../controllers/mainController.js");
 //const cors = require("cors");
 
@@ -20,5 +21,5 @@ router.delete("/:id", deleteProduct);
 
 router.put("/:id", updateProduct);
 
-router.post("/login");
+router.post("/login", loginUser);
 module.exports = router;
