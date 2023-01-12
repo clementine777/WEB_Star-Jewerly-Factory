@@ -3,6 +3,7 @@
 
 const products = require("../models/products.js");
 const Users = require("../models/users.js");
+const dash_user = require("../models/dashboard_user.js");
 
 //consulata toda la tabala
 const loadAllPorducts = (req, res) => {
@@ -82,16 +83,19 @@ const updateProduct = async function updateProduct(req, res) {
   }
 };
 
+//LOGIN DE ANGULAR!!!!!!
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
-  const user = await Users.findOne({ where: { email } });
-  console.log(user);
-  if (!user) {
+  const dash_user = await dash_user.findOne({ where: { email } });
+  console.log(dash_user);
+  if (!dash_user) {
     res.status(401).json({ message: "Email or password incorrect" });
   } else {
     // verifica el password o eso creo
-    if (user.password === password) {
-      res.status(200).json({ message: "Login successful", user: user });
+    if (dash_user.password === password) {
+      res
+        .status(200)
+        .json({ message: "Login successful", dash_user: dash_user });
     } else {
       res.status(401).json({ message: "Email or password incorrect" });
     }
