@@ -2,7 +2,11 @@
 
 ---
 
+#### **_Logo de la Marca:_**
+
 ![logo](https://i.ibb.co/dPcmB2Z/cooltext415529546518944.webp)
+
+---
 
 ## ICARO Diseño temática y bases del e-commerce, Diplomatura Web Full Stack
 
@@ -22,11 +26,11 @@ al publico que van dirigidos nuestros productos exclusivos es a toda persona que
 
 #### **_Tipografia Principal:_**
 
-- Helvetica Now
+- Arial
 
-- Blacker
+- Helvetica
 
-- Woodland
+- sans-serif
 
 #### **_Paleta de Colores:_**
 
@@ -38,7 +42,7 @@ al publico que van dirigidos nuestros productos exclusivos es a toda persona que
 
 - 610094
 
-#### **_Logo de la Marca:_**
+---
 
 ### **_Link de figma_**
 
