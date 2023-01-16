@@ -44,6 +44,12 @@ al publico que van dirigidos nuestros productos exclusivos es a toda persona que
 
 ---
 
-### **_Link de figma_**
+#### **_instrucciones de ejecucion:_**
+
+para ejecutar el proyecto correctamente la base de datos MYSQL se encuentra en el directorio "base_de_datos" con un archivo .sql que se debe ejecutar en un gestor de base de datos preferentemente "mySql workbech"
+
+---
+
+### **_Link de diseño preliminar en FIGMA_**
 
 https://www.figma.com/file/D6ErvzVY3bvZTcTgNoFnux/Star-Jewerly-factory
