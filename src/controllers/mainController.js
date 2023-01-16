@@ -86,13 +86,13 @@ const updateProduct = async function updateProduct(req, res) {
 //LOGIN DE ANGULAR!!!!!!
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
-  const dash_user = await dash_user.findOne({ where: { email } });
+  const dash_user = await dash_user.findOne({ where: { user_name } });
   console.log(dash_user);
   if (!dash_user) {
     res.status(401).json({ message: "Email or password incorrect" });
   } else {
     // verifica el password o eso creo
-    if (dash_user.password === password) {
+    if (dash_user.user_password === password) {
       res
         .status(200)
         .json({ message: "Login successful", dash_user: dash_user });

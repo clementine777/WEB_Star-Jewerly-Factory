@@ -1,5 +1,9 @@
 # Star Factory joyas - Joyas de plata y piedars naturales
 
+---
+
+![logo](https://i.ibb.co/dPcmB2Z/cooltext415529546518944.webp)
+
 ## ICARO Diseño temática y bases del e-commerce, Diplomatura Web Full Stack
 
 ---
@@ -35,10 +39,6 @@ al publico que van dirigidos nuestros productos exclusivos es a toda persona que
 - 610094
 
 #### **_Logo de la Marca:_**
-
-![logo](https://github.com/clementine777/gabriel-cortez-star-factory-joyeria/blob/master/img/cooltext415529546518944.png)
-
-![logo_2](https://github.com/clementine777/gabriel-cortez-star-factory-joyeria/blob/master/img/cooltext415529627293908.png)
 
 ### **_Link de figma_**
 
